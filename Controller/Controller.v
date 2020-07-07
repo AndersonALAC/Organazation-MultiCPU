@@ -36,6 +36,7 @@ module Controller(
     output reg IorD, // 0 PC_out, 1 ALU_out
 	output reg MemRead,
     output reg MemWrite, 
+    output reg vm_w,
     output reg IRWrite, // 1 write, 0 no write
     output reg [1:0] RegDst, // 00 rt(IR[21:16], 01 rd(IR[15:11]), 10/11 \
     output reg RegWrite, // 1 write, 0 no write
@@ -44,6 +45,7 @@ module Controller(
     output reg [2:0] ALUSrcB, // 00 reg B, 01 2(for PC + 2), 10 imm32, 11 imm32<<2
     output reg [1:0] PCSource, // 00 alu_res, 01 ALU_out, 10 jump_addr, 11 \
 	output reg Branch, // 0 for bne, 1 for beq
+    output reg RegSrcB,
 	output reg CPU_MIO
     );
 
@@ -70,6 +72,8 @@ always@(posedge clk or posedge rst)begin
 						case(ALU_Func)
 							ALU_Jr: state<=Jr;
 							ALU_JALr: state<=JALr;
+                            ALU_Syscall: state<=Syscall;
+                            ALU_Eret: state<=Eret;
 							default: state<=R_Exe;
 						endcase
 					end
@@ -112,14 +116,16 @@ always@(posedge clk or posedge rst)begin
 			JAL: state<=IF;
 			JALr: state<=IF;
             BGEZAL_Exe:state<=IF;
+            Syscall: state<=IF;
+            Eret: state<=Eret;
 			default: state<=IF;
 		endcase
 end
 
 ////////////////////Datapath control////////////////////
-`define Datapath_signals {PCWrite,PCWriteCond,IorD,MemRead,MemWrite,IRWrite,MemtoReg,PCSource,ALUSrcB,ALUSrcA,RegWrite,RegDst,Branch,CPU_MIO}
-//                        1       1           1    1       1        1       2        2        3       1       1        2      1      1
-//                        1       2           3    4       5        6       8        10       13      14      15       17     18     19
+`define Datapath_signals {PCWrite,PCWriteCond,IorD,MemRead,MemWrite,IRWrite,MemtoReg,PCSource,ALUSrcB,ALUSrcA,RegWrite,RegDst,Branch,CPU_MIO,RegSrcB,vm_w}
+//                        1       1           1    1       1        1       2        2        3       1       1        2      1      1       1       1
+//                        1       2           3    4       5        6       8        10       13      14      15       17     18     19      20      21
 // assign datapath control
 always@(*)begin
 	case(state)
@@ -215,6 +221,8 @@ always@(*)begin
             `Datapath_signals <= value_BGEZAL_Exe;
             ALU_operation <= SLT;
         end
+        Syscall: `Datapath_signals <= value_Syscall;
+        Eret: `Datapath_signals <= value_Eret;
 		default:`Datapath_signals <= value_IF;
 	endcase
 end

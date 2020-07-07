@@ -17,32 +17,36 @@ parameter IF 		= 5'b00000, // Instruction Fetch
 			Jr 		= 5'b01110, // jump register
 			JAL 	= 5'b01111, // 
 			JALr	= 5'b11111,
-            BGEZAL_Exe  = 5'b10001;
+            BGEZAL_Exe  = 5'b10001,
+            Syscall = 5'b10010,
+			Eret = 5'b10011;
 			
 // define datapath signal output for states
-//`define Datapath_signals {PCWrite,PCWriteCond,IorD,MemRead,MemWrite,IRWrite,MemtoReg,PCSource,ALUSrcB,ALUSrcA,RegWrite,RegDst,Branch,CPU_MIO}
-//                          1       1           1    1       1        1       2        2        3       1       1        2      1      1
-//                          1       2           3    4       5        6       7        9        11      14      15       16     18     19
-//                                          B  A
-parameter value_IF			= 19'b1000010000001000001,
-			value_ID		= 19'b0000000000011000000,
-			value_Mem_Acc	= 19'b0000000000010100000,
-			value_LD_RD		= 19'b0011000000010100001,
-			value_LD_WB		= 19'b0000000100000010000,
-			value_SV_WB		= 19'b0010100000010100001,
-			value_R_Exe		= 19'b0000000000000100000,
-			value_R_SA		= 19'b0000000000100100000,
-			value_R_WB		= 19'b0000000000000110100,
-			value_I_Exe		= 19'b0000000000010100000,
-			value_I_WB		= 19'b0000000000010110000,
-			value_Lui_WB	= 19'b0000001100011010000,
-			value_Beq_Exe	= 19'b0100000001000100010,
-			value_Bne_Exe	= 19'b0100000001000100010,
-			value_J			= 19'b1000000010011000000,
-			value_Jr		= 19'b1000000000000100000,
-			value_JAL		= 19'b1000001010011011000,
-			value_JALr		= 19'b1000001000000111000,
-           value_BGEZAL_Exe = 19'b0100001001101111010;
+//`define Datapath_signals {PCWrite,PCWriteCond,IorD,MemRead,MemWrite,IRWrite,MemtoReg,PCSource,ALUSrcB,ALUSrcA,RegWrite,RegDst,Branch,CPU_MIO,RegSrcB,vm_w}
+//                          1       1           1    1       1        1       2        2        3       1       1        2      1      1       1       1
+//                          1       2           3    4       5        6       7        9        11      14      15       16     18     19      20      21
+//                                           B  A
+parameter value_IF			 = 21'b100001000000100000100,
+			value_ID		 = 21'b000000000001100000000,
+			value_Mem_Acc	 = 21'b000000000001010000000,
+			value_LD_RD		 = 21'b001100000001010000100,
+			value_LD_WB		 = 21'b000000010000001000000,
+			value_SV_WB		 = 21'b001010000001010000100,
+			value_R_Exe		 = 21'b000000000000010000000,
+			value_R_SA		 = 21'b000000000010010000000,
+			value_R_WB		 = 21'b000000000000011010000,
+			value_I_Exe		 = 21'b000000000001010000000,
+			value_I_WB		 = 21'b000000000001011000000,
+			value_Lui_WB	 = 21'b000000110001101000000,
+			value_Beq_Exe	 = 21'b010000000100010001000,
+			value_Bne_Exe	 = 21'b010000000100010001000,
+			value_J			 = 21'b100000001001100000000,
+			value_Jr		 = 21'b100000000000010000000,
+			value_JAL		 = 21'b100000101001101100000,
+			value_JALr		 = 21'b100000100000011100000,
+            value_BGEZAL_Exe = 21'b010000100110111101000,
+            value_Syscall    = 21'b000000000000000000011,
+			value_Eret	     = 21'b000000000000000000000;
             
 // define OPCodes
 parameter OP_R 		= 6'b000000,
@@ -86,7 +90,9 @@ parameter ALU_ADD	 = 6'b100000,
 			ALU_SRA	 = 6'b000011,
 			ALU_SRAv = 6'b000111,
 			ALU_Jr	 = 6'b001000,
-			ALU_JALr = 6'b001001;
+			ALU_JALr = 6'b001001,
+            ALU_Syscall = 6'b001100,
+			ALU_Eret = 6'b011000;
 
 // define ALU opcode
 parameter AND	= 4'b0000,

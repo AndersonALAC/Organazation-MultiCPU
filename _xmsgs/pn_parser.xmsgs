@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- IMPORTANT: This is an internal file that has been generated   -->
+<!--     by the Xilinx ISE software.  Any direct editing or        -->
+<!--     changes made to this file may result in unpredictable     -->
+<!--     behavior or data corruption.  It is strongly advised that -->
+<!--     users do not edit the contents of this file.              -->
+<!--                                                               -->
+<!-- Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.    -->
+
+<messages>
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;C:/Users/marib/OneDrive - zju.edu.cn/Junior II/07_Computer_Organization/MultiCPU/Organazation-MultiCPU/Controller/Controller.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1065" >&quot;<arg fmt="%s" index="1">C:/Users/marib/OneDrive - zju.edu.cn/Junior II/07_Computer_Organization/MultiCPU/Organazation-MultiCPU/Controller/Controller.v</arg>&quot; Line <arg fmt="%d" index="2">50</arg>. <arg fmt="%s" index="3">Include file found: &apos;C:/Users/marib/OneDrive - zju.edu.cn/Junior II/07_Computer_Organization/MultiCPU/Organazation-MultiCPU/Controller/mips_parameters.vh&apos; in file &quot;C:/Users/marib/OneDrive - zju.edu.cn/Junior II/07_Computer_Organization/MultiCPU/Organazation-MultiCPU/Controller/Controller.v&quot; line 50
+</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;C:/Users/marib/OneDrive - zju.edu.cn/Junior II/07_Computer_Organization/MultiCPU/Organazation-MultiCPU/MultiCPU.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;C:/Users/marib/OneDrive - zju.edu.cn/Junior II/07_Computer_Organization/MultiCPU/Organazation-MultiCPU/RAM/MUX8T1_16.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;C:/Users/marib/OneDrive - zju.edu.cn/Junior II/07_Computer_Organization/MultiCPU/Organazation-MultiCPU/RAM/MUX8T1_32.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;C:/Users/marib/OneDrive - zju.edu.cn/Junior II/07_Computer_Organization/MultiCPU/Organazation-MultiCPU/RAM/RAM.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;C:/Users/marib/OneDrive - zju.edu.cn/Junior II/07_Computer_Organization/MultiCPU/Organazation-MultiCPU/datapath/ADD32b.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;C:/Users/marib/OneDrive - zju.edu.cn/Junior II/07_Computer_Organization/MultiCPU/Organazation-MultiCPU/datapath/ADD4b.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;C:/Users/marib/OneDrive - zju.edu.cn/Junior II/07_Computer_Organization/MultiCPU/Organazation-MultiCPU/datapath/ALU.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;C:/Users/marib/OneDrive - zju.edu.cn/Junior II/07_Computer_Organization/MultiCPU/Organazation-MultiCPU/datapath/CLA.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;C:/Users/marib/OneDrive - zju.edu.cn/Junior II/07_Computer_Organization/MultiCPU/Organazation-MultiCPU/datapath/MUX16T1_32.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;C:/Users/marib/OneDrive - zju.edu.cn/Junior II/07_Computer_Organization/MultiCPU/Organazation-MultiCPU/datapath/MUX2T1_32.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;C:/Users/marib/OneDrive - zju.edu.cn/Junior II/07_Computer_Organization/MultiCPU/Organazation-MultiCPU/datapath/MUX4T1_32.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;C:/Users/marib/OneDrive - zju.edu.cn/Junior II/07_Computer_Organization/MultiCPU/Organazation-MultiCPU/datapath/MUX4T1_5.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;C:/Users/marib/OneDrive - zju.edu.cn/Junior II/07_Computer_Organization/MultiCPU/Organazation-MultiCPU/datapath/M_datapath.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;C:/Users/marib/OneDrive - zju.edu.cn/Junior II/07_Computer_Organization/MultiCPU/Organazation-MultiCPU/datapath/REG32.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;C:/Users/marib/OneDrive - zju.edu.cn/Junior II/07_Computer_Organization/MultiCPU/Organazation-MultiCPU/datapath/Regs.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;C:/Users/marib/OneDrive - zju.edu.cn/Junior II/07_Computer_Organization/MultiCPU/Organazation-MultiCPU/datapath/add.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;C:/Users/marib/OneDrive - zju.edu.cn/Junior II/07_Computer_Organization/MultiCPU/Organazation-MultiCPU/top.v&quot; into library work</arg>
+</msg>
+
+</messages>
+
